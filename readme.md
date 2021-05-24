@@ -140,5 +140,6 @@ No modules.
 
 | Name | Description |
 |------|-------------|
-| <a name="output_vlan_segment"></a> [vlan\_segment](#output\_vlan\_segment) | n/a |
+| <a name="output_vlan_segment"></a> [vlan\_segment](#output\_vlan\_segment) | VLAN segment paths and full object output. Ingested in BGP configuration for edges and other objects |
 <!-- END_TF_DOCS -->
+
