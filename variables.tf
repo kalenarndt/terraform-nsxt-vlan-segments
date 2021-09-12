@@ -16,7 +16,7 @@ variable "segment_name" {
 
 variable "vlan_ids" {
   description = "(Optional) - VLAN ID for the VLAN Segment"
-  type        = number
+  type        = list(string)
   default     = null
 }
 

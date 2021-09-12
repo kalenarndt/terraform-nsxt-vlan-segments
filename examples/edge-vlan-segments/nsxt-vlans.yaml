@@ -6,7 +6,7 @@ vlan_segments:
     description: Segment for Management workloads  - Created by Terraform
   nfs:
     segment_name: seg-nfs-vl1
-    vlan_id: '"0","1"'
+    vlan_id: ["0","1"]
     description: Segment for NFS traffic - Created by Terraform
   vmotion:
     segment_name: seg-vmotion-vl10
