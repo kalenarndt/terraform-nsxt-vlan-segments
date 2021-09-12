@@ -1,0 +1,32 @@
+# vlan segments section. General VLAN segment creation for vmkernels and vms that do not require overlay networking.
+vlan_segments:
+  management:
+    segment_name: seg-mgmt-vl17
+    vlan_id: "17"
+    description: Segment for Management workloads  - Created by Terraform
+  nfs:
+    segment_name: seg-nfs-vl1
+    vlan_id: '"0","1"'
+    description: Segment for NFS traffic - Created by Terraform
+  vmotion:
+    segment_name: seg-vmotion-vl10
+    vlan_id: "10"
+    description: Segment for vMotion traffic - Created by Terraform
+  workload:
+    segment_name: seg-workload-vl18
+    vlan_id: "10"
+    description: Segment for Workload traffic - Created by Terraform
+
+# edge vlan segments section. If you modify the segment_name here ensure you modify the segment_name under the router_ports section or router port creation will fail.
+# These segments are used for BGP peering from the Edge Nodes
+edge_vlan_segments:
+  edge_path_a:
+    segment_name: seg-edge-fa-vl100
+    vlan_id: "100"
+    teaming_policy: tor-1
+    description: Segment for BGP peering on Fabric-A - Created by Terraform
+  edge_path_b:
+    segment_name: seg-edge-fb-vl101
+    vlan_id: "101"
+    teaming_policy: tor-2
+    description: Segment for BGP peering on Fabric-B - Created by Terraform
