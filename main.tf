@@ -25,5 +25,5 @@ resource "nsxt_policy_vlan_segment" "vlan_segment" {
 }
 
 locals {
-  segment_to_path = { for segment, path in nsxt_policy_vlan_segment.vlan_segment : (segment.display_name) => segment.path}
+  segment_to_path = { for segment, path in nsxt_policy_vlan_segment.vlan_segment : (segment.display_name) => segment.path }
 }
