@@ -4,6 +4,6 @@ output "vlan_segment_map" {
 }
 
 output "vlan_segment_paths" {
-  value       = local.segments
+  value       = local.segment_to_path
   description = "VLAN Segment names and their associated policy paths"
 }
